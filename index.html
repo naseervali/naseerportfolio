@@ -96,6 +96,10 @@
     .section {
       padding: 60px 20px;
     }
+    .section {
+  padding: 60px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
     .section h2 {
       text-align: center;
       margin-bottom: 40px;
@@ -160,6 +164,125 @@
       font-size: 1.4rem;
       color: #2c3e50;
     }
+    #about {
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Experience Section */
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.experience-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.experience-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Education Section */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.education-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.education-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.education-description {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .experience-container, .education-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section Heading */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* General Card Styling */
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+ #about p {
+  font-size: 1rem;
+  color: #777;
+}
   </style>
 </head>
 <body>
@@ -167,6 +290,7 @@
     <div class="container nav-container">
       <div class="nav-logo">Naseer Vali Shaik</div>
       <nav>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
@@ -184,18 +308,68 @@
       <a href="https://github.com/naseervali" target="_blank"><i class="fab fa-github"></i></a>
     </div> -->
   </section>
-
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m an enthusiastic and dedicated Associate Engineer with hands-on experience in front-end and back-end development. Skilled in HTML, CSS, Bootstrap, JavaScript, React.js, Java, JDBC, Python, and MySQL, I enjoy building responsive, user-friendly applications and solving real-world problems through clean and efficient code. Currently working as an Associate Engineer since January 2025, I’m constantly learning and growing in a dynamic environment. I’m passionate about technology and always eager to explore new tools and frameworks that enhance my development skills. My goal is to work with forward-thinking organizations where I can contribute meaningfully, continue learning, and grow professionally. Let’s connect and explore opportunities to build innovative tech solutions together.</p>
+  </section>
+  
+  <section id="experience" class="section" data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="experience-container">
+      <div class="experience-card">
+        <h3>Snapcast Solutions Pvt Ltd</h3>
+        <p><strong>Role:</strong> Associate Engineer</p>
+        <p><strong>Duration:</strong> January 2025 - Present (4 months)</p>
+        <p><strong>Location:</strong> Bengaluru, Karnataka, India</p>
+        <p class="job-description">Working as an Associate Engineer where I contribute to full-stack development, focusing on backend and front-end technologies. I'm involved in building scalable applications and collaborating with cross-functional teams.</p>
+      </div>
+      <div class="experience-card">
+        <h3>Besant Technologies Bengaluru (BTM Layout)</h3>
+        <p><strong>Role:</strong> Full-stack Developer</p>
+        <p><strong>Duration:</strong> June 2023 - December 2023 (7 months)</p>
+        <p class="job-description">As a Full-stack Developer, I designed and implemented dynamic web applications using modern technologies like JavaScript, React, and Node.js. I collaborated with clients to build solutions tailored to their needs.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="education" class="section" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-card">
+        <h3>Bachelor of Technology</h3>
+        <p><strong>Institute:</strong> Sri Venkateshwara College of Engineering and Technology, Chittoor</p>
+        <p><strong>Duration:</strong> July 2019 - April 2023</p>
+        <p><strong>CGPA:</strong> 7.30</p>
+        <p class="education-description">A comprehensive program in Computer Science Engineering, focusing on building strong foundations in software development and computer science principles.</p>
+      </div>
+      <div class="education-card">
+        <h3>Intermediate</h3>
+        <p><strong>Institute:</strong> Narayana Junior College</p>
+        <p><strong>Duration:</strong> June 2017 - March 2019</p>
+        <p><strong>Percentage:</strong> 9.21</p>
+        <p class="education-description">Studied advanced subjects in Mathematics, Physics, and Chemistry, with a focus on analytical and problem-solving skills for engineering preparation.</p>
+      </div>
+      <div class="education-card">
+        <h3>10th Grade</h3>
+        <p><strong>Institute:</strong> Sree Valmeeki High School</p>
+        <p><strong>Duration:</strong> March 2016 - April 2017</p>
+        <p><strong>Percentage:</strong> 9.5</p>
+        <p class="education-description">Completed high school education with excellent academic performance, laying the foundation for future studies in engineering.</p>
+      </div>
+    </div>
+  </section>
+  
   <section class="section" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-icons container">
-      <i class="fab fa-html5" title="HTML5"></i>
-      <i class="fab fa-css3-alt" title="CSS3"></i>
-      <i class="fab fa-js-square" title="JavaScript"></i>
-      <i class="fab fa-react" title="React"></i>
-      <i class="fab fa-java" title="Java"></i>
-      <i class="fas fa-database" title="MySQL"></i>
-      <i class="fab fa-python" title="Python"></i>
-      <i class="fab fa-github" title="GitHub"></i>
+      <i class="fab fa-html5" title="HTML5"><abbr title="HTML5"></abbr></i>
+      <i class="fab fa-css3-alt" title="CSS3"><abbr title="CSS3"></abbr></i>
+      <i class="fab fa-js-square" title="JavaScript"><abbr title="JavaScript"></abbr></i>
+      <i class="fab fa-react" title="React"><abbr title="React"></abbr></i>
+      <i class="fab fa-java" title="Java"><abbr title="Java"></abbr></i>
+      <i class="fas fa-database" title="MySQL"><abbr title="MySQL"></abbr></i>
+      <i class="fab fa-python" title="Python"><abbr title="Python"></abbr></i>
+      <i class="fab fa-github" title="GitHub"><abbr title="GitHub"></abbr></i>
     </div>
   </section>
 
@@ -221,11 +395,11 @@
   <section class="section" data-aos="fade-up">
     <h2>Certifications</h2>
     <div class="certs container">
-      <i class="fas fa-certificate" title="Java Full Stack Developer - Besant"></i>
-      <i class="fas fa-brain" title="Prompt Engineering - IMTF"></i>
-      <i class="fas fa-globe" title="Web Development - Skill Vertex"></i>
-      <i class="fas fa-puzzle-piece" title="UX/UI Design Principles"></i>
-      <i class="fas fa-link" title="Blockchain Platforms"></i>
+      <i class="fas fa-certificate" title="Java Full Stack Developer - Besant"><abbr title="Java Full Stack Developer"></abbr></i>
+      <i class="fas fa-brain" title="Prompt Engineering - IMTF"><abbr title="Prompt Engineering - IMTF"></abbr></i>
+      <i class="fas fa-globe" title="Web Development - Skill Vertex"><abbr title="Web Development - Skill Vertex"></abbr></i>
+      <i class="fas fa-puzzle-piece" title="UX/UI Design Principles"><abbr title="UX/UI Design Principles"></abbr></i>
+      <i class="fas fa-link" title="Blockchain Platforms"></i><abbr title="Blockchain Platforms"></abbr>
     </div>
   </section>
 
